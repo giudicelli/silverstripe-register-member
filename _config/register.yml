@@ -1,0 +1,12 @@
+---
+Name: register-member
+---
+SilverStripe\Security\Member:
+  extensions:
+    - SilverStripe\Security\MemberAuthenticator\RegisterMember
+
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Security\Security:
+    properties:
+      Authenticators:
+        registerauthenticator: %$SilverStripe\Security\MemberAuthenticator\RegisterAuthenticator

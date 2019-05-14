@@ -1,0 +1,13 @@
+fr:
+  SilverStripe\Control\Email\RegisterEmail_ss:
+    HELLO: Bonjour
+    TEXT1: 'Voici votre'
+    TEXT2: 'lien de confirmation'
+    TEXT3: pour
+  SilverStripe\Security\Member:
+    REGISTER: 'S''enregistrer'
+    SUBJECTREGISTER: 'Votre lien de confirmation'
+  SilverStripe\Security\MemberAuthenticator\MemberRegisterForm:
+    AUTHENTICATORNAME: 'Créer un compte'
+  SilverStripe\Security\MemberAuthenticator\RegisterHandler:
+    MESSAGESENTEMAIL: 'Nous vous avons envoyé un lien de confirmation, vous devrez cliquer dessus pour valider votre compte.'
