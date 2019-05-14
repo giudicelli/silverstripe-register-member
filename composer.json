@@ -3,13 +3,11 @@
     "type": "library",
     "description": "Allows user to request account registration",
     "keywords": ["silvertripe","authentication","register"],
-    "homepage": "https://github.com/giudicell/silverstripe-register-member",
+    "homepage": "https://github.com/giudicelli/silverstripe-register-member",
     "license": "MIT",
     "authors": [
         {
             "name": "Frédéric Giudicelli",
-            "email": "j.boggiano@seld.be",
-            "homepage": "http://seld.be",
             "role": "Developer"
         }
     ]
