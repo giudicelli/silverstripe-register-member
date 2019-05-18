@@ -19,6 +19,8 @@ use SilverStripe\Security\RememberLoginHash;
 use SilverStripe\Security\Security;
 use SilverStripe\View\Requirements;
 
+use SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension;
+
 /**
  * Log-in form for the "member" authentication method.
  *
@@ -80,6 +82,10 @@ class MemberRegisterForm extends MemberLoginForm
         if (Director::fileExists($customCSS)) {
             Requirements::css($customCSS);
         }
+        
+        if ($this->hasExtension(FormSpamProtectionExtension::class)) {
+            $this->enableSpamProtection();
+        }
     }
 
     /**
@@ -132,7 +138,7 @@ class MemberRegisterForm extends MemberLoginForm
     protected function getFormActions()
     {
         $actions = FieldList::create(
-            FormAction::create('doRegister', _t('SilverStripe\\Security\\Member.REGISTER', "Register"))
+            FormAction::create('doRegister', _t(self::class.'.REGISTER', 'Register'))
         );
         return $actions;
     }
@@ -145,6 +151,6 @@ class MemberRegisterForm extends MemberLoginForm
      */
     public function getAuthenticatorName()
     {
-        return _t(self::class . '.AUTHENTICATORNAME', "Register");
+        return _t(self::class . '.AUTHENTICATORNAME', 'Register');
     }
 }

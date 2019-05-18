@@ -304,8 +304,8 @@ class RegisterHandler extends RequestHandler
             ->setHTMLTemplate('SilverStripe\\Control\\Email\\RegisterEmail')
             ->setData($member)
             ->setSubject(_t(
-                'SilverStripe\\Security\\Member.SUBJECTREGISTER',
-                "Your confirmation link",
+                __CLASS__.'.SUBJECTREGISTER',
+                'Your confirmation link',
                 'Email subject'
             ))
             ->addData('RegisterLink', $link)
